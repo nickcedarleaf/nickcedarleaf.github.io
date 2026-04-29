@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cedarleaf Ceramics – Retail Partners</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: Georgia, serif;
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      color: white;
+      background: rgba(0,0,0,0.35);
+      padding: 14px 20px;
+      border-radius: 6px;
+    }
+
+    .store {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .location {
+      font-size: 18px;
+      opacity: 0.85;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      font-size: 42px;
+      cursor: pointer;
+    }
+
+    .nav div {
+      padding: 20px;
+      user-select: none;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .intro h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 20px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="slide active">
+  <div class="intro">
+    <h1>Cedarleaf Ceramics</h1>
+    <p>Now carried in independent shops, galleries, and garden boutiques across the country</p>
+  </div>
+</div>
+
+<!-- SLIDES -->
+
+<div class="slide">
+  <img src="little-traverse-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Little Traverse Tileworks</div>
+    <div class="location">Harbor Springs, Michigan</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="hydrangea-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Hydrangea Home</div>
+    <div class="location">Northport, New York</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="brookdale-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Brookdale Fruit Farm</div>
+    <div class="location">Hollis, New Hampshire</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="down-creek-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Down Creek Gallery</div>
+    <div class="location">Ocracoke, North Carolina</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="splurge-inside.jpeg">
+  <div class="overlay">
+    <div class="store">SPLURGE...just a little</div>
+    <div class="location">Hendersonville, North Carolina</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="against-grain-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Against The Grain</div>
+    <div class="location">Southern Pines, North Carolina</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="native-iris-inside.jpeg">
+  <div class="overlay">
+    <div class="store">The Native Iris</div>
+    <div class="location">Westminster, South Carolina</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="plant-shop-outside.jpeg">
+  <div class="overlay">
+    <div class="store">The Plant House</div>
+    <div class="location">Ferndale, Michigan</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="asheville-emporium-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Asheville Emporium</div>
+    <div class="location">Asheville, North Carolina</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="store10.jpg">
+  <div class="overlay">
+    <div class="store">Adelaide</div>
+    <div class="location">Pasadena, California</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="everson-outside.jpeg">
+  <div class="overlay">
+    <div class="store">Everson Museum of Art</div>
+    <div class="location">Syracuse, New York</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="store12.jpg">
+  <div class="overlay">
+    <div class="store">Olive’s Porch</div>
+    <div class="location">Murphy, North Carolina</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="store13.jpg">
+  <div class="overlay">
+    <div class="store">Mountain Hollow</div>
+    <div class="location">Stonington, Connecticut</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="store14.jpg">
+  <div class="overlay">
+    <div class="store">Star Garden Studio</div>
+    <div class="location">Fairhaven, Massachusetts</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="store15.jpg">
+  <div class="overlay">
+    <div class="store">Wild Oats & Billy Goats</div>
+    <div class="location">Decatur, Georgia</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <div onclick="prev()">❮</div>
+  <div onclick="next()">❯</div>
+</div>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
+function next() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prev() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+</script>
+
+</body>
+</html>
