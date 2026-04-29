@@ -105,6 +105,87 @@ footer{background:var(--ink);color:rgba(250,247,242,.7);padding:2rem 0}.foot{dis
     padding: 10px 0;
   }
 }
+    /* locations page styles */
+    
+    .locations-section {
+  background: #f0ebe0;
+  padding: 6rem 4rem;
+}
+
+.locations-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.locations-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.08;
+  color: #1e2a1a;
+  margin-bottom: 1.3rem;
+}
+
+.locations-text p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #3d5c30;
+  max-width: 34rem;
+}
+
+.locations-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: #3d5c30;
+  color: #faf7f2;
+  text-decoration: none;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.locations-button:hover {
+  background: #1b4f72;
+}
+
+.locations-card {
+  background: #faf7f2;
+  border: 1.5px solid #b8c9a3;
+  padding: 2.5rem;
+  box-shadow: 12px 12px 0 rgba(184, 201, 163, 0.35);
+}
+
+.locations-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #1e2a1a;
+  margin-bottom: 0.8rem;
+}
+
+.locations-card span {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #4a7fa5;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .locations-section {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .locations-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
     
 </style>
     
@@ -163,6 +244,31 @@ footer{background:var(--ink);color:rgba(250,247,242,.7);padding:2rem 0}.foot{dis
     <article class="process-card"><img src="assets/glazed-bottles-table.jpg" alt="Finished glazed bottles arranged together"><div><h3>Glaze Runs</h3><p>Soft blues, greens, clay, ochre, and mountain-water colors mixed into each collection.</p></div></article></div></div>
     
 </section>
+    
+<section id="locations" class="locations-section">
+  <div class="locations-inner">
+    <div class="locations-text">
+      <p class="section-label">Retail Locations</p>
+      <h2>Find Cedarleaf Ceramics in Shops & Galleries</h2>
+      <p>
+        Cedarleaf pieces are carried by select boutiques, galleries, and small shops across the country — from mountain towns to coastal studios.
+      </p>
+      <a href="http://www.cedarleafceramics.com/store-gallery/stores-collage-2.html" class="locations-button">
+        View Store Gallery
+      </a>
+    </div>
+
+    <div class="locations-card">
+      <p>Pasadena, CA</p>
+      <p>Murphy, NC</p>
+      <p>Stonington, CT</p>
+      <p>Fairhaven, MA</p>
+      <p>Decatur, GA</p>
+      <span>and more</span>
+    </div>
+  </div>
+</section>    
+    
     
 <section class="place"><div class="place-grid"><div class="place-img"><img src="assets/mountain-sunset.jpg" alt="Blue Ridge mountain sunset"></div><div class="place-copy"><div><div class="eyebrow">Made in Asheville</div><h2>Color pulled from <em>mountains, rivers, forests & coastlines.</em></h2><p>The palette comes from places I’ve lived and loved: Blue Ridge ridgelines, Smoky Mountain evenings, river rock, lush plants, fall leaves, and ocean air. The result is pottery that feels grounded, relaxed, and quietly special.</p></div></div></div></section>
     
