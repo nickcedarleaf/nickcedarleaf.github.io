@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+    
 <style>
 :root{
   --cream:#faf7f2; --linen:#f0ebe0; --sand:#e2d8c8; --sage:#b8c9a3; --sage-deep:#6f875d; --sage-dark:#324f2a;
@@ -36,9 +37,89 @@ footer{background:var(--ink);color:rgba(250,247,242,.7);padding:2rem 0}.foot{dis
 @media(max-width:950px){.links{display:none}.hero,.wedding-grid,.place-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-content{width:min(620px,calc(100% - 40px));margin:0 auto;padding:4rem 0}.hero-image{min-height:450px}.cards{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:1rem}.wedding-img img,.place-img img,.about-photo img{height:430px}.place-copy{padding:4rem 20px}section{padding:5rem 0}}
 @media(max-width:600px){.cards{grid-template-columns:1fr}.brand img{width:105px}.hero-logo{width:220px}.hero h1{font-size:3rem}.hero-note{left:1rem;right:1rem;bottom:1rem}.card-img{height:280px}.nav-inner{height:68px}.hero{padding-top:68px}}
     
+    
+   /* dropdown mobile nav  */
+    
+    .site-header {
+  width: 100%;
+  padding: 10px 20px;
+  background: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Desktop nav */
+.nav-menu {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 10px 0;
+  }
+}
+    
 </style>
+    
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+    
 </head>
 <body>
+<!-- 
 <nav><div class="wrap nav-inner"><a class="brand" href="#home"><img src="assets/logo.png" alt="Cedarleaf Ceramics logo"></a>
     <ul class="links">
         <li><a href="#collections">Collections</a></li>
@@ -48,6 +129,33 @@ footer{background:var(--ink);color:rgba(250,247,242,.7);padding:2rem 0}.foot{dis
         <li><a href="http://www.cedarleafceramics.com/store-gallery/stores-collage-2.html" target="_blank">Locations</a></li>
         <li><a href="#contact">Inquire</a></li></ul>
     </div></nav>
+    -->
+    
+<header class="site-header">
+  <div class="nav-container">
+    
+    <div class="logo">
+      <img src="cedarleaf-ceramics-logo.png" alt="Cedarleaf Ceramics">
+    </div>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <!-- Nav Links -->
+    <nav class="nav-menu" id="nav-menu">
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#weddings">Weddings</a>
+      <a href="#process">Process</a>
+      <a href="http://www.cedarleafceramics.com/store-gallery/stores-collage-2.html" target="_blank">Locations</a>    
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>    
+    
 <section class="hero" id="home"><div class="hero-copy"><div class="hero-content"><img class="hero-logo" src="assets/logo.png" alt="Cedarleaf Ceramics"><div class="eyebrow">Asheville, NC · Hand-thrown in small batches</div><h1>Mountain-made <em>ceramics</em> for home, garden & gathering.</h1><p>Cedarleaf Ceramics creates hand-thrown pottery inspired by Blue Ridge light, creek stone, forest greens, ocean blues, and the useful beauty of objects made by hand.</p><div class="hero-actions"><a class="btn primary" href="#contact">Wedding & Custom Inquiry</a><a class="btn secondary" href="https://www.etsy.com/shop/CedarleafCeramics" target="_blank" rel="noopener">Shop on Etsy</a></div></div></div><div class="hero-image"><img src="assets/hero-creek.png" alt="Colorful Cedarleaf mini bottles beside a mountain creek"><div class="hero-note">Mini bottles, bud vases, kitchen pieces, garden wares, and custom wedding collections — made one at a time in Asheville.</div></div></section>
 <div class="strip"><div class="strip-track"><span>Mini bottles & bud vases</span><span>Wedding planner orders welcome</span><span>Kitchen · bath · garden · home</span><span>Custom glaze palettes</span><span>Wholesale inquiries</span><span>Asheville, North Carolina</span><span>Mini bottles & bud vases</span><span>Wedding planner orders welcome</span><span>Kitchen · bath · garden · home</span><span>Custom glaze palettes</span><span>Wholesale inquiries</span><span>Asheville, North Carolina</span></div></div>
     
