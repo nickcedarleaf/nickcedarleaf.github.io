@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cedarleaf Ceramics – Retail Partners</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: Georgia, serif;
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      color: white;
+      background: rgba(0,0,0,0.35);
+      padding: 14px 20px;
+      border-radius: 6px;
+    }
+
+    .store {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .location {
+      font-size: 18px;
+      opacity: 0.85;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      font-size: 42px;
+      cursor: pointer;
+    }
+
+    .nav div {
+      padding: 20px;
+      user-select: none;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .intro h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      font-size: 20px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="slide active">
+  <div class="intro">
+    <h1>Cedarleaf Ceramics</h1>
+    <p>Now carried in independent shops, galleries, and garden boutiques across the country</p>
+  </div>
+</div>
+
+<!-- SLIDES -->
+
+<div class="slide">
+  <img src="00-tin-roof-duo.png">
+  <div class="overlay">
+    <div class="store">Tin Roof Duo</div>
+    <div class="location">One of our newest glaze combos this mimics old aged & rusty tin roofs</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="00-amber-haze-solo.png">
+  <div class="overlay">
+    <div class="store">Amber Haze</div>
+    <div class="location">A rare combo effect this has lovely streaks of white over amber</div>
+  </div>
+</div>
+
+<div class="slide">
+  <img src="00-Cerulean-blue-solo.jpg">
+  <div class="overlay">
+    <div class="store">Cerulean Blue</div>
+    <div class="location">Another one of our newest glaze colors spring 2026</div>
+  </div>
+</div>
+    
+<div class="slide">
+  <img src="00-lavender-daffodil-promo.jpg">
+  <div class="overlay">
+    <div class="store">Lavender</div>
+    <div class="location">Lavender bottle vase on a mantle</div>
+  </div>
+</div>
+    
+<div class="slide">
+  <img src="00-summetime-colors-glazes.jpg">
+  <div class="overlay">
+    <div class="store">Summer Time Colors</div>
+    <div class="location">Bright and delicious summertime glaze colors</div>
+  </div>
+</div>
+    
+<div class="slide">
+  <img src="00-sunken-blk-roman.jpg">
+  <div class="overlay">
+    <div class="store">Sunken Treasure</div>
+    <div class="location">Black Roman Vase</div>
+  </div>
+</div>
+    
+<div class="slide">
+  <img src="IMAGE.jpg">
+  <div class="overlay">
+    <div class="store">NAME</div>
+    <div class="location">INFO</div>
+  </div>
+</div>
+
+
+<!-- NAV -->
+<div class="nav">
+  <div onclick="prev()">❮</div>
+  <div onclick="next()">❯</div>
+</div>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[i].classList.add('active');
+}
+
+function next() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prev() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+</script>
+
+</body>
+</html>
