@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cedarleaf Ceramics Portfolio</title>
+
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #faf7f2;
+    }
+
+    .portfolio-section {
+      padding: 6rem 4rem;
+    }
+
+    .portfolio-header {
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+      text-align: center;
+    }
+
+    .portfolio-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      color: #1e2a1a;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-header p {
+      color: #3d5c30;
+      line-height: 1.75;
+    }
+
+    .portfolio-mosaic {
+      max-width: 1250px;
+      margin: 0 auto;
+      column-count: 4;
+      column-gap: 1.25rem;
+    }
+
+    .portfolio-item {
+      break-inside: avoid;
+      position: relative;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      background: #e2d9c8;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .portfolio-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(70, 70, 70, 0.86);
+      color: #fff;
+      padding: 0.85rem 1rem;
+    }
+
+    .portfolio-caption h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      margin: 0 0 0.2rem;
+    }
+
+    .portfolio-caption p {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 1100px) {
+      .portfolio-mosaic {
+        column-count: 3;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .portfolio-section {
+        padding: 4rem 1.25rem;
+      }
+
+      .portfolio-mosaic {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .portfolio-mosaic {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="portfolio-section">
+  <div class="portfolio-header">
+    <h2>Small-Batch Pieces</h2>
+    <p>Hand-thrown ceramics across bowls, kitchenware, mugs, and drinkware.</p>
+  </div>
+
+  <div class="portfolio-mosaic">
+
+    <div class="portfolio-item">
+      <img src="00-amber-haze-solo.png" alt="Amber Haze Mini Bottle">
+      <div class="portfolio-caption"><h3>Amber Haze</h3><p>Mini Bottles</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="00-Cerulean-blue-solo.jpg" alt="Cerulean Blue Mini Bottle">
+      <div class="portfolio-caption"><h3>Cerulean Blue</h3><p>Mini Bottles</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="00-lavender-daffodil-promo.jpg" alt="Lavender Daffodil Mini Vase">
+      <div class="portfolio-caption"><h3>Lavender Daffodil</h3><p>Mini Bottles & Vases</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="00-stardust-duo.png" alt="Stardust Duo">
+      <div class="portfolio-caption"><h3>Stardust Duo</h3><p>Mini Bottles</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="01-blue-green-marble-plate-sets.jpeg" alt="Blue Green Marble Plate Sets">
+      <div class="portfolio-caption"><h3>Blue Green Marble</h3><p>Plate Sets</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="01-blue-ridge-mtns-plate.jpg" alt="Blue Ridge Mountains Plate">
+      <div class="portfolio-caption"><h3>Blue Ridge Mountains</h3><p>Plate Sets</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="01-farmhouse-sunrise.jpg" alt="Farmhouse Sunrise Plate">
+      <div class="portfolio-caption"><h3>Farmhouse Sunrise</h3><p>Plate Sets</p></div>
+    </div>  
+      
+    <div class="portfolio-item">
+      <img src="02-blue-green-strainer.JPG" alt="">
+      <div class="portfolio-caption"><h3>Strainer Bowl</h3><p>Kitchenware</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="02-fruit-juicer-bama-coral-side.jpg" alt="">
+      <div class="portfolio-caption"><h3>Fruit Juicer</h3><p>Kitchenware</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="02-popcorn-bowl.jpg" alt="">
+      <div class="portfolio-caption"><h3>Popcorn Bowl</h3><p>Bowls</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="03-circus-set-coffee copy 3.JPG" alt="">
+      <div class="portfolio-caption"><h3>Coffee Set</h3><p>Drinkware</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="03-latte-mug-maps.JPG" alt="">
+      <div class="portfolio-caption"><h3>Latte Mugs</h3><p>Drinkware</p></div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="03-random-mugs-collage.JPG" alt="">
+      <div class="portfolio-caption"><h3>Mug Collection</h3><p>Drinkware</p></div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
